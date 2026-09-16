@@ -1,0 +1,13 @@
+.nav-bar ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: antiquewhite;
+    height: 70px;
+}
+.icon{
+    font-size: 30px;
+
+}
