@@ -22,11 +22,11 @@ export const skills = [
 
 export const projects = [
   {
-    title: "E-Commerce Platform",
+    title: "Bill spilt",
     desc: "ระบบร้านค้าออนไลน์เต็มรูปแบบ พร้อมตะกร้าสินค้าและชำระเงิน",
-    tags: ["React", "Node.js", "Stripe"],
+    tags: ["React"],
     image: "",
-    link: "#",
+    link: "https://github.com/TigerBOGBOG/BillSplit",
   },
   {
     title: "E-Commerce Platform",
