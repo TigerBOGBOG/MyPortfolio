@@ -135,6 +135,7 @@ export default function App() {
             {projects.map((p) => (
               <a key={p.title} href={p.link} className="card" target="_blank" rel="noreferrer">
                 <div className="card-img">
+                  <span className={`status ${p.status.toLowerCase().replaceAll(" ", "-")}`}>{p.status}</span>
                   <img src={p.image} alt={p.title} loading="lazy" />
                 </div>
                 <div className="card-body">

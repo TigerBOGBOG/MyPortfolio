@@ -1,4 +1,5 @@
 import billSplitImg from "./assets/Billsplit-thumbnail.png";
+import AurideImg from "./assets/Auride-thumbnail.png";
 
 export const profile = {
   name: "Pannarong Fuengkeaw",
@@ -34,17 +35,19 @@ export const skills = {
 export const projects = [
   {
     title: "Bill spilt",
-    desc: "ระบบร้านค้าออนไลน์เต็มรูปแบบ พร้อมตะกร้าสินค้าและชำระเงิน",
+    desc: "Bill spilt with friends app",
     tags: ["React"],
     image: billSplitImg,
-    link: "https://github.com/TigerBOGBOG/BillSplit",
+    link: "billsplit-by-tiger.vercel.app",
+    status: "Completed"
   },
   {
-    title: "Bill spilt",
-    desc: "ระบบร้านค้าออนไลน์เต็มรูปแบบ พร้อมตะกร้าสินค้าและชำระเงิน",
-    tags: ["React"],
-    image: billSplitImg,
-    link: "https://github.com/TigerBOGBOG/BillSplit",
+    title: "Auride",
+    desc: "Ride hailing",
+    tags: ["React","express","prisma"],
+    image: AurideImg,
+    link: "https://github.com/TigerBOGBOG/AuRide",
+    status: "In Progress"
   },
 
 ]
