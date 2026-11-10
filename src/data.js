@@ -38,7 +38,7 @@ export const projects = [
     desc: "Bill spilt with friends app",
     tags: ["React"],
     image: billSplitImg,
-    link: "billsplit-by-tiger.vercel.app",
+    link: "https://github.com/TigerBOGBOG/BillSplit",
     status: "Completed"
   },
   {
