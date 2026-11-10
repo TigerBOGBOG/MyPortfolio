@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { profile, skills, projects, } from "./data";
-import profileImage from "./assets/Profile.png";
+import profileImage from "./assets/Profile.jpeg";
 import "./App.css";
 
 // Hook: ตรวจว่า element เข้ามาในจอหรือยัง
@@ -79,27 +79,27 @@ export default function App() {
 
       <main className="container">
         {/* ---------- HERO ---------- */}
-        <section className="hero">
-          <div className="hero-text">
-            <p className="hero-hi">Hi my name is</p>
-            <h1 className="hero-name">{profile.name}</h1>
-            <h2 className="hero-role">{profile.role}</h2>
-            <p className="hero-tagline">{profile.tagline}</p>
-            <div className="hero-btns">
-              <button className="btn primary" onClick={() => scrollTo("projects")}>
-                ดูผลงาน
-              </button>
-              <a className="btn ghost" href={`mailto:${profile.email}`}>
-                ติดต่อผม
-              </a>
-            </div>
+      <section className="hero">
+        <div className="hero-text">
+          <p className="hero-hi">Hi my name is</p>
+          <h1 className="hero-name">{profile.name}</h1>
+          <h2 className="hero-role">{profile.role}</h2>
+          <p className="hero-tagline">{profile.tagline}</p>
+          <div className="hero-btns">
+            <button className="btn primary" onClick={() => scrollTo("projects")}>
+              ดูผลงาน
+            </button>
+            <a className="btn ghost" href={`mailto:${profile.email}`}>
+              ติดต่อผม
+            </a>
           </div>
-          <div className="hero-avatar">
-            <div className="avatar-ring">
-              <img src={profileImage} alt={profile.name} />
-            </div>
+        </div>
+        <div className="hero-avatar">
+          <div className="avatar-ring">
+            <img src={profileImage} alt={profile.name} />
           </div>
-        </section>
+        </div>
+      </section>
 
         {/* ---------- ABOUT ---------- */}
         <Section id="about" title="About">
@@ -107,21 +107,27 @@ export default function App() {
         </Section>
 
         {/* ---------- SKILLS ---------- */}
-        <Section id="skills" title="Skill">
-          <div className="skills-grid">
-            {skills.map((s) => (
-              <div key={s.name} className="skill">
-                <div className="skill-head">
-                  <span>{s.name}</span>
-                  <span className="muted">{s.level}%</span>
+          <Section id="skills" title="Skills">
+            <div className="skills-container">
+              {Object.entries(skills).map(([category, items]) => (
+                <div className="skill-category" key={category}>
+                  <h3>{category}</h3>
+
+                  <div className="skills-grid">
+                    {items.map((skill) => (
+                      <div className="skill-item" key={skill.name}>
+                        <img
+                          src={`/icons/${skill.icon}.svg`}
+                          alt={skill.name}
+                        />
+                        <span>{skill.name}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-                <div className="bar">
-                  <div className="bar-fill" style={{ width: `${s.level}%` }} />
-                </div>
-              </div>
-            ))}
-          </div>
-        </Section>
+              ))}
+            </div>
+          </Section>
 
         {/* ---------- PROJECTS ---------- */}
         <Section id="projects" title="Project">

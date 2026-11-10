@@ -1,3 +1,5 @@
+import billSplitImg from "./assets/Billsplit-thumbnail.png";
+
 export const profile = {
   name: "Pannarong Fuengkeaw",
   role: "Computer and Robotics Engineering student",
@@ -11,29 +13,39 @@ I enjoy turning ideas into functional applications and continuously challenging 
 `,
 };
 
-export const skills = [
-  { name: "React", level: 90 },
-  { name: "TypeScript", level: 85 },
-  { name: "Next.js", level: 80 },
-  { name: "Node.js", level: 75 },
-  { name: "Tailwind CSS", level: 88 },
-  { name: "Figma", level: 70 },
-];
+export const skills = {
+  frontend: [
+    { name: "React", icon: "react" },
+    { name: "Javascript", icon: "javascript" },
+    { name: "Tailwind CSS", icon: "tailwind" },
+  ],
+  backend: [
+    { name: "Node.js", icon: "nodejs" },
+    { name: "Express", icon: "express" },
+    { name: "Prisma", icon: "prisma" },
+  ],
+  tools: [
+    { name: "Git", icon: "git" },
+    { name: "GitHub", icon: "github" },
+    { name: "Docker", icon: "docker" },
+  ],
+};
 
 export const projects = [
   {
     title: "Bill spilt",
     desc: "ระบบร้านค้าออนไลน์เต็มรูปแบบ พร้อมตะกร้าสินค้าและชำระเงิน",
     tags: ["React"],
-    image: "",
+    image: billSplitImg,
     link: "https://github.com/TigerBOGBOG/BillSplit",
   },
   {
-    title: "E-Commerce Platform",
+    title: "Bill spilt",
     desc: "ระบบร้านค้าออนไลน์เต็มรูปแบบ พร้อมตะกร้าสินค้าและชำระเงิน",
-    tags: ["React", "Node.js", "Stripe"],
-    image: "",
-    link: "#",
+    tags: ["React"],
+    image: billSplitImg,
+    link: "https://github.com/TigerBOGBOG/BillSplit",
   },
+
 ]
 
