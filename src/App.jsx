@@ -133,24 +133,15 @@ export default function App() {
         <Section id="projects" title="Project">
           <div className="projects-grid">
             {projects.map((p) => (
-              <a
-                key={p.title}
-                href={p.url}
-                className="card"
-                target="_blank"
-                rel="noreferrer"
-              >
+              <a key={p.title} href={p.link} className="card" target="_blank" rel="noreferrer">
                 <div className="card-img">
                   <span className={`status ${p.status.toLowerCase().replaceAll(" ", "-")}`}>
-                    {p.status}
-                  </span>
+                    {p.status}</span>
                   <img src={p.image} alt={p.title} loading="lazy" />
                 </div>
-
                 <div className="card-body">
                   <h3>{p.title}</h3>
                   <p className="muted">{p.desc}</p>
-
                   <div className="tags">
                     {p.tags.map((t) => (
                       <span key={t} className="tag">{t}</span>
